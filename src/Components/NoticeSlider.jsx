@@ -57,50 +57,50 @@ const NoticeSlider = () => {
 
   return (
     <div>
-      <h1 className="font-bold text-black text-[36px] mx-3">
+      <h1 className="font-bold text-black text-[24px] md:text-[36px] m-3">
         DG Shipping Approved Pre-sea courses
       </h1>
-      <div className="bg-orange-100 p-4 mx-3 mb-3 rounded-lg">
+      <div className="bg-[#CEDEF6] p-4 mx-3 mb-3 rounded-lg">
         <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-          <li>
-            <a
+          <li className="text-black font-semibold">
+            {/* <a
               href="https://eurotechmaritime.org/course-booking/diploma-in-nautical-science"
               className="text-black font-semibold hover:underline"
-            >
-              Diploma in Nautical Science (DNS)
-            </a>
+            > */}
+            Diploma in Nautical Science (DNS)
+            {/* </a> */}
           </li>
-          <li>
-            <a
+          <li className="text-black font-semibold">
+            {/* <a
               href="https://eurotechmaritime.org/course-booking/bsc-nautical-science"
               className="text-black font-semibold hover:underline"
-            >
-              BSc Nautical Science
-            </a>
+            > */}
+            BSc Nautical Science
+            {/* </a> */}
           </li>
-          <li>
-            <a
+          <li className="text-black font-semibold">
+            {/* <a
               href="https://eurotechmaritime.org/course-booking/b-tech-in-marine-engineering"
               className="text-black font-semibold hover:underline"
-            >
-              B-Tech Marine Engineering
-            </a>
+            > */}
+            B-Tech Marine Engineering
+            {/* </a> */}
           </li>
-          <li>
-            <a
+          <li className="text-black font-semibold">
+            {/* <a
               href="https://eurotechmaritime.org/course-booking/graduate-marine-engineering-gme"
               className="text-black font-semibold hover:underline"
-            >
-              Graduate Marine Engineering (GME)
-            </a>
+            > */}
+            Graduate Marine Engineering (GME)
+            {/* </a> */}
           </li>
-          <li>
-            <a
+          <li className="text-black font-semibold">
+            {/* <a
               href="https://eurotechmaritime.org/course-booking/pre-sea-training-for-electro-technical-officer-eto-a1"
               className="text-black font-semibold hover:underline"
-            >
-              Electro Technical Officer (ETO)
-            </a>
+            > */}
+            Electro Technical Officer (ETO)
+            {/* </a> */}
           </li>
         </ul>
       </div>
