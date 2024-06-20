@@ -11,15 +11,16 @@ const CoursesItem = ({ title, data, className, index }) => {
 //     // Allow only alphabets (both cases), dashes, and hyphens
 //     return url.replace(/[^a-zA-Z0-9-]/g, '-').toLowerCase();
 // }
-  const formattedTitle = data.title.replace(/\s+/g, "-").toLowerCase(); //this is  used previously
+  const formattedTitle = data.slug.replace(/\s+/g, "-").toLowerCase(); //this is  used previously
   // const formattedTitle = sanitizeURL(data.title) // this will be the upgraded
-
+  console.log("data",data)
   return (
     <div
       onClick={() =>
         navigate(
           // `${routes.COURSE_BOOKING}/${formattedTitle}`,{ state: { id: data.id } } //this will be a new upgrade
-          `${routes.COURSE_BOOKING}/${data.slug}`,
+          // `${routes.COURSE_BOOKING}${routes.ABOUT}/${data.id}/${formattedTitle}`,
+          `${routes.COURSE_BOOKING}/${formattedTitle}-${data.id}`,
           { state: { id: data.id } }  // this is previous code
         )
       }

@@ -6,12 +6,14 @@ import { useNavigate } from "react-router-dom";
 const MyCourseItem = ({ data }) => {
   const date = dayjs(data?.date).format("DD/MM/YYYY");
   const navigate = useNavigate();
+  const formattedTitle = data.slug.replace(/\s+/g, "-").toLowerCase();
   return (
     <div
       className="flex md:flex-row flex-col bg-white drop-shadow-xl p-5 border my-5 cursor-pointer"
       onClick={() =>
         navigate(
-          `${routes.COURSE_BOOKING}/${data.slug}`,
+          // `${routes.COURSE_BOOKING}${routes.COURSE_ABOUT}/${data.title}`,
+          `${routes.COURSE_BOOKING}/${formattedTitle}-${data.id}`,
           {
             state: { hideBook: true, batchData: data.batch_name, id: data.id },
           }

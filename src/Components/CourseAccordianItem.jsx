@@ -14,7 +14,7 @@ const CourseAccordianItem = ({ data }) => {
   const count = useSelector(({ app }) => app.cartCount);
   const [batches, setBatches] = useState([]);
   const dispatch = useDispatch();
-  const formattedTitle = data.title.replace(/\s+/g, "-").toLowerCase();
+  const formattedTitle = data.slug.replace(/\s+/g, "-").toLowerCase();
 
   useEffect(() => {
     (async () => {
@@ -99,7 +99,8 @@ const CourseAccordianItem = ({ data }) => {
           <button
             onClick={() =>
               navigate(
-                `${routes.COURSE_BOOKING}/${data.slug}`,
+                // `${routes.COURSE_BOOKING}${routes.COURSE_ABOUT}/${data.id}/${formattedTitle}`,
+                `${routes.COURSE_BOOKING}/${formattedTitle}-${data.id}`,
                 { state: { id: data.id } }
               )
             }

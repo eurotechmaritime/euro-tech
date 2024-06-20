@@ -35,7 +35,6 @@ const Homepage = () => {
             Dreamed of having the <br /> super power to choose a <br />
             dashing career?
           </h1>
-          
           <div className="relative mt-10 ">
             <input
               className="max-h-[55px] border border-slate-300 p-5 bg-transparent min-w-[320px] placeholder:text-white"
@@ -97,7 +96,6 @@ const Homepage = () => {
           </div>
           <div>
             <div className="flex justify-between">
-             
               <h1 className="font-bold text-black text-[36px]">
                 Latest Updates & Notices
               </h1>

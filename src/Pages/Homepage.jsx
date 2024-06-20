@@ -28,9 +28,10 @@ const Homepage = () => {
     infinite: true,
     arrows: false,
     speed: 500,
+
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay:false,
   };
   const settings2 = {
     dots: false,
@@ -44,9 +45,10 @@ const Homepage = () => {
   const sliderRef = useRef(null);
   const sliderRef1 = useRef(null);
 
-  function dangerousHTML(c) {
-    return { __html: c };
-  }
+  function dangerousHTML(c){
+    return { __html : c};
+}   
+
 
   useEffect(() => {
     (async () => {
@@ -61,7 +63,7 @@ const Homepage = () => {
     })();
   }, []);
 
-  console.log("data", data);
+  console.log("data", data)
   return (
     <>
       <Helmet>
@@ -73,91 +75,64 @@ const Homepage = () => {
         <link rel="canonical" href="https://eurotechmaritime.org" />
       </Helmet>
       <LoadingOverlay active={isActive} spinner text="Loading your content...">
-        <div className="">
-          <Slider {...settings}>
-            <div>
-              {data?.home_slider?.map((item) => (
-                <section
-                  key={item.id}
-                  className="lg:h-[700px] flex justify-center sm:h-[560px] h-[450px]"
+      <div className="">
+      <Slider {...settings}>
+        <div>
+        {data?.home_slider?.map((item) => (
+        <section
+          key={item.id}
+          className="lg:h-[700px] flex justify-center sm:h-[560px] h-[450px]"
+        >
+            <img src={`${item.image_url}`} alt="banner" className="w-full h-full object-cover -z-10"/>
+          <div className=" container flex flex-col justify-center mx-auto h-full absolute top-5  pl-2">
+            <h1 className="text-white text-[32px] mx-6 md:text-[48px] font-bold md:max-w-[600px] max-w-[300px]">
+              {item.tag_line}
+            </h1>
+            <div className="relative mt-10 max-w-[90vw] md:max-w-[520px] mx-6 flex justify-evenly bg-white rounded-3xl items-center px-2 md:px-5">
+              <span className="absolute top-2.5 md:top-4 left-2 md:left-4">
+                <FiSearch size="20" strokeWidth="1" />
+              </span>
+              <input
+                className="max-h-[45px] md:max-h-[55px] w-full flex-1 p-5 bg-transparent placeholder:text-black focus-visible:border-0 sm:w-[90%]"
+                placeholder="Search Course..."
+                onChange={(e) => setSearchInput(e.target.value)}
+              />
+              <div>
+                <button
+                  className="bg-[#D8272F] p-2 px-2 md:px-4 rounded-2xl text-white whitespace-nowrap text-[12px] md:text-[16px]"
+                  onClick={() =>
+                    searchInput.length > 0 &&
+                    navigate(
+                      `${routes.COURSE_BOOKING}?search=${searchInput}`
+                    )
+                  }
                 >
-                  <img
-                    src={`${item.image_url}`}
-                    alt="banner"
-                    className="w-full h-full object-cover -z-10"
-                  />
-                  <div className=" container flex flex-col justify-center mx-auto h-full absolute top-5 ">
-                    <h1 className="text-white mx-6 font-bold md:max-w-[800px] max-w-[400px] text-3xl md:text-5xl">
-                      {item.tag_line}
-                    </h1>
-                    <div className="relative mt-10 max-w-[90vw] md:max-w-[520px] mx-6 flex justify-evenly bg-white rounded-3xl items-center px-2 md:px-5">
-                      <span className="absolute top-2.5 md:top-4 left-2 md:left-4">
-                        <FiSearch size="20" strokeWidth="1" />
-                      </span>
-                      <input
-                        className="max-h-[45px] md:max-h-[55px] w-full flex-1 p-5 bg-transparent placeholder:text-black focus-visible:border-0 sm:w-[90%]"
-                        placeholder="Search Course..."
-                        onChange={(e) => setSearchInput(e.target.value)}
-                      />
-                      <div>
-                        <button
-                          className="bg-[#D8272F] p-2 px-2 md:px-4 rounded-2xl text-white whitespace-nowrap text-[12px] md:text-[16px]"
-                          onClick={() =>
-                            searchInput.length > 0 &&
-                            navigate(
-                              `${routes.COURSE_BOOKING}?search=${searchInput}`
-                            )
-                          }
-                        >
-                          Course Booking
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-              ))}
-            </div>
-            <div className="z-50 !flex !justify-center">
-              <video
-                autoPlay
-                muted
-                loop
-                className="lg:h-[700px] sm:h-[560px]  brightness-[0.5] h-[450px] w-full object-cover"
-              >
-                <source src="/helicam 7 sec.mp4" type="video/mp4" />
-              </video>
-              <div className="container flex flex-col flex-wrap justify-center mx-auto h-full z-10 absolute top-5">
-                <h1 className="text-white mx-6 font-bold md:max-w-[800px] max-w-[400px] text-3xl md:text-5xl">
-                  Dreamed of having the <br /> super power to choose a <br />
-                  dashing career?
-                </h1>
-                <div className="relative mt-10 max-w-[90vw] md:max-w-[520px] mx-6 flex justify-evenly bg-white rounded-3xl items-center px-2 md:px-5">
-                  <span className="absolute top-2.5 md:top-4 left-2 md:left-4">
-                    <FiSearch size="20" strokeWidth="1" />
-                  </span>
-                  <input
-                    className="max-h-[45px] md:max-h-[55px] w-full flex-1 p-5 bg-transparent placeholder:text-black focus-visible:border-0 sm:w-[90%]"
-                    placeholder="Search Course..."
-                    onChange={(e) => setSearchInput(e.target.value)}
-                  />
-                  <div>
-                    <button
-                      className="bg-[#D8272F] p-2 px-2 md:px-4 rounded-2xl text-white whitespace-nowrap text-[12px] md:text-[16px]"
-                      onClick={() =>
-                        searchInput.length > 0 &&
-                        navigate(
-                          `${routes.COURSE_BOOKING}?search=${searchInput}`
-                        )
-                      }
-                    >
-                      Course Booking
-                    </button>
-                  </div>
-                </div>
+                  Course Booking
+                </button>
               </div>
-              {/* Your browser does not support the video tag. */}
             </div>
-          </Slider>
+          </div>
+        </section>
+      ))}
+        </div>
+        <div className="z-50 !flex !justify-center">
+
+        <video autoPlay muted loop className="lg:h-[700px] sm:h-[560px]  brightness-[0.5] h-[450px] w-full object-cover">
+
+  <source src="/helicam 7 sec.mp4" type="video/mp4"/>
+  </video>
+  <div className="container flex flex-col flex-wrap justify-center mx-auto h-full z-10 absolute top-5 pl-2">
+            <h1 className="text-white text-[16px] sm:text-[32px] flex-wrap md:text-[40px] mx-6 font-bold">
+            DG Shipping Approved Pre-sea courses <br /> Diploma in Nautical Science (DNS), <br /> BSc Nautical Science, <br /> B-Tech Marine Engineering, <br /> Graduate Marine Engineering (GME), <br /> and Electro Technical Officer (ETO)
+            </h1>
+         
+          </div>
+  {/* Your browser does not support the video tag. */}
+
+        </div>
+      
+  
+    </Slider>
 
           <section className="container md:py-10 py-5 md:px-6 mx-auto">
             <NoticeSlider />

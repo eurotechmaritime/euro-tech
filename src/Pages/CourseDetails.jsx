@@ -74,7 +74,7 @@ const CourseDetails = () => {
   }, [update]);
 
   useEffect(() => {
-    console.log("batches",batchList, cartData);
+    console.log(batchList, cartData);
   }, [batchList, cartData]);
 
   return (

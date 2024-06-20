@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react";
 import PageBanner from "../Components/PageBanner";
 import { FiArrowLeft } from "react-icons/fi";
 import { routes } from "../constants/routes";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams, useRouteError } from "react-router-dom";
 import axios from "axios";
 import { Endpoints } from "../constants/Endpoints";
 import dayjs from "dayjs";
 import { useDispatch, useSelector } from "react-redux";
 import { increaseCartCount } from "../redux/ActionCreator";
+import { generateUniqueNumber } from "../utils";
 import { AiFillCheckCircle } from "react-icons/ai";
 import { FaChevronUp, FaChevronDown } from "react-icons/fa";
 import { toast } from "react-toastify";
@@ -18,20 +19,32 @@ const AboutCourse = () => {
   const dispatch = useDispatch();
   const location = useLocation();
   const routeData = location.state;
+  // const {ID} = location.state || {};
+  // const router = useRouteError()
   const navigate = useNavigate();
-  const ID = routeData.id;
   const { id, title } = useParams();
+  // const ID = routeData.id;
   const [data, setData] = useState({});
   const profileDetails = useSelector(({ app }) => app.profileDetails);
-  const [selectedFile, setSelectedFile] = useState(null);
+  const [selectedFile, setSelectedFile] = React.useState(null);
   const [docsArray, setDocsArray] = useState([]);
   const [alreadyUploaded, setAlreadyUploaded] = useState([]);
   const [batchData, setBatchData] = useState([]);
   const [batchesAvail, setBatchesAvail] = useState(true);
   const [open, setOpen] = useState(false);
+  const [ID,setID] = useState()
 
-  console.log("id", ID);
-  console.log("title", title);
+  useEffect(() => {
+    if(title){
+      let arr = title.split("-")
+      let id = arr[arr.length-1];
+      setID(Number(id))
+    }
+  },[title])
+
+  console.log("id",id,routeData)
+  // console.log("id",ID)
+  console.log("title",title)
 
   useEffect(() => {
     (async () => {
@@ -51,14 +64,15 @@ const AboutCourse = () => {
         }
       }
     })();
-  }, [id, profileDetails?.token]);
+  }, []);
 
   useEffect(() => {
-    
     (async () => {
-     
       try {
-        const res = await axios.get(`${Endpoints.BASE_URL}/courses/fetch/${ID}`);
+        if(ID === undefined) return;
+        const res = await axios.get(
+          `${Endpoints.BASE_URL}/courses/fetch/${ID}`
+        );
         setData(res.data.data);
       } catch (e) {
         console.log(e, "error with API");
@@ -82,17 +96,25 @@ const AboutCourse = () => {
   useEffect(() => {
     (async () => {
       try {
-        const res = await axios.get(`${Endpoints.API_URL}/batches/get/list?course_id=${ID}`);
+        if(!ID) return
+        const res = await axios.get(
+          `${Endpoints.API_URL}/batches/get/list?course_id=${id}`
+        );
         setBatchData(res.data.data);
       } catch (e) {
         console.log(e);
       }
     })();
-  }, [id]);
+  }, []);
 
+  // e.status hard coded, it is to be changed in future
   useEffect(() => {
-    if (batchData.some(e => dayjs().isBefore(e.start_date) && e.status !== "Closed")) {
-      if (batchData.some(item => item.available_seats !== 0)) {
+    if (
+      batchData.some(
+        (e) => dayjs().isBefore(e.start_date) && e.status !== "Closed"
+      )
+    ) {
+      if (batchData.some((item) => item.available_seats !== 0)) {
         setBatchesAvail(true);
       } else {
         setBatchesAvail(false);
@@ -105,7 +127,7 @@ const AboutCourse = () => {
   const AddToCart = async () => {
     if (profileDetails.token) {
       try {
-        await axios.post(
+        const res = await axios.post(
           `${Endpoints.BASE_URL}/cart/add-cart`,
           {
             course_id: data.id,
@@ -177,22 +199,6 @@ const AboutCourse = () => {
     setSelectedFile(event.target.files[0]);
   };
 
-  const isHTML = (str) => {
-    const doc = new DOMParser().parseFromString(str, "text/html");
-    return Array.from(doc.body.childNodes).some((node) => node.nodeType === 1);
-  };
-
-  const renderEligibilityContent = () => {
-    const eligibilityContent = data?.eligibility;
-    if (!eligibilityContent) return null;
-
-    if (isHTML(eligibilityContent)) {
-      return <span className="text-[12px] md:text-[16px]" dangerouslySetInnerHTML={{ __html: eligibilityContent }} />;
-    }
-
-    return <span className="text-[12px] md:text-[16px]">{eligibilityContent}</span>;
-  };
-
   return (
     <>
       <Helmet>
@@ -259,7 +265,7 @@ const AboutCourse = () => {
                       {open ? <FaChevronUp /> : <FaChevronDown />}{" "}
                     </p>
                   ) : (
-                    <p>We are currently planning the upcoming batch schedule. In the meantime, contact our admissions office at <a href="tel:+91 7025045000"  style={{ color: 'blue' }}> +91 7025045000 </a>for more information.</p>
+                    <p>No batches available</p>
                   )}
                 </div>
               )}
@@ -303,7 +309,7 @@ const AboutCourse = () => {
                 Eligibility
               </div>
               <div className="col-span-9 py-4 px-8 bg-white">
-                {renderEligibilityContent()}
+                {data?.eligibility}
               </div>
             </div>
             {routeData?.hideBook && (
@@ -319,7 +325,7 @@ const AboutCourse = () => {
                       ).length > 0
                     ) {
                       return (
-                        <div key={item.id}>
+                        <div>
                           <p className="my-3">{item.name}</p>
                           <div className="flex justify-between">
                             <input
@@ -333,7 +339,7 @@ const AboutCourse = () => {
                       );
                     } else {
                       return (
-                        <form key={item.id} onSubmit={(e) => handleSubmit(e, item)}>
+                        <form onSubmit={(e) => handleSubmit(e, item)}>
                           <p className="my-3">{item.name}</p>
                           <div className="flex justify-between">
                             <input type="file" onChange={handleFileSelect} />

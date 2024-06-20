@@ -35,7 +35,7 @@ const Header = () => {
   };
   return (
     <header
-      className={`p-2 px-5 lg:p-5 lg:px-6 fixed w-screen text-white ${stickyClass} z-10`}
+      className={`p-2 px-3 lg:p-5 lg:px-6 fixed w-screen text-white ${stickyClass} z-10`}
     >
       <div className="container mx-auto flex w-100 justify-between items-center">
         <Link to="/" className="grow md:grow-0 mr-4">

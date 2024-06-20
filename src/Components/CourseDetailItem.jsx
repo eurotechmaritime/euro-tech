@@ -20,11 +20,11 @@ const CourseDetailItem = ({ data, batches }) => {
       );
       setBatchData(res.data.data || []);
     })();
-  }, [data.course_id]);
+  }, []);
 
   const removeItem = async () => {
     try {
-      await axios.delete(
+      const res = await axios.delete(
         `${Endpoints.BASE_URL}/cart/remove-course-from-cart`,
         {
           headers: {
@@ -42,51 +42,34 @@ const CourseDetailItem = ({ data, batches }) => {
 
   const batchDetail = batches.find((e) => e.course_id === data.course_id);
   const navigate = useNavigate();
-
-  const isHTML = (str) => {
-    const doc = new DOMParser().parseFromString(str, 'text/html');
-    return Array.from(doc.body.childNodes).some(node => node.nodeType === 1);
-  };
-
-  const renderEligibilityContent = () => {
-    const eligibilityContent = data?.course?.eligibility;
-    if (!eligibilityContent) return null;
-
-    if (isHTML(eligibilityContent)) {
-      return (
-        <span className="text-[12px] md:text-[16px]" dangerouslySetInnerHTML={{ __html: eligibilityContent }} />
-      );
-    }
-
-    return <span className="text-[12px] md:text-[16px]">{eligibilityContent}</span>;
-  };
-
+  console.log(data);
   return (
     <div className="flex md:flex-row flex-col bg-white drop-shadow-xl p-5">
-      <div className="flex flex-col justify-center mr-4">
+      <div className=" flex flex-col justify-center mr-4">
         <img
           src={data?.course?.cover_image_url}
-          className="h-[130px] my-auto"
+          className="h-[130px] my-auto "
           alt=""
         />
       </div>
       <div className="flex flex-col md:flex-row gap-14 w-full justify-between">
-        <div className="text-gray-500">
+        <div className=" text-gray-500 ">
           <p className="text-[#03014C] font-bold">{data?.course?.title}</p>
           <p className="text-[14px] leading-[20px]">
             {data?.course?.description}
           </p>
-          <div className="flex flex-col text-[14px] my-2 mt-0 gap-1">
+          {/*<p className="text-[14px] font-bold ">Tutor Name</p>*/}
+          <div className=" flex flex-col text-[14px] my-2 mt-0 gap-1">
             <p>
-              <span className="font-bold">Duration: -{" "}</span>
-              <span>{data?.course?.duration} Day</span>
+            <span className="font-bold">Duration : -{" "}</span>
+              <span className="">{data?.course?.duration} Day</span>
             </p>
             <p className="">
-              <span className="font-bold">Eligibility: -{" "}</span>
-              {renderEligibilityContent()}
+             <span className="font-bold">Eligibility : -{" "}</span>
+              <span className=" text-[12px] md:text-[16px] ">{data?.course?.eligibility}</span>
             </p>
           </div>
-          <div className="flex gap-5">
+          <div className="flex gap-5 ">
             {/* <div className="text-[12px] text-[#6aa8ff] flex items-center justify-end gap-1">
               <FaStar /> 5.0
             </div>
@@ -108,7 +91,7 @@ const CourseDetailItem = ({ data, batches }) => {
         </div>
         <div className="flex flex-col justify-between">
           {data?.batch_name ? (
-            <button
+            <button 
               className="bg-[#CDE0F4] flex items-center gap-3 text-black font-semibold px-6 py-1 rounded-xl whitespace-nowrap"
               onClick={() =>
                 navigate(routes.BATCHES, {

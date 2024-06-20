@@ -109,7 +109,8 @@ function App() {
           />
           <Route path={`${routes.MY_PROFILE}`} element={<MyProfilePage />} />
           <Route
-            path={`${routes.COURSE_BOOKING}/:slug`}
+            // path={`${routes.COURSE_BOOKING}${routes.ABOUT}/:id/:title`}
+            path={`${routes.COURSE_BOOKING}/:title`}
             element={<AboutCourse />}
           />
           <Route path={`${routes.BLOG}`} element={<Blog />} />

@@ -133,7 +133,7 @@ const CourseSliderComponent = ({ limit }) => {
       </div>
       <p className="text-[15px] text-[#464646] font-semibold my-8">
         Practical training & personalized, education Programme for developing
-        efficient mariners.
+        efferent mariners.
       </p>
       <div className="">
           <Slider ref={sliderRef} {...settings}>

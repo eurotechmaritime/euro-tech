@@ -12,12 +12,15 @@ import { Helmet } from "react-helmet-async";
 const PurchasedItem = ({ data }) => {
   const date = dayjs(data?.date).format("DD/MM/YYYY");
   const navigate = useNavigate();
-
+  const formattedTitle = data.slug.replace(/\s+/g, "-").toLowerCase();
   return (
     <div
       className="flex flex-col md:flex-row bg-white drop-shadow-xl p-5 border my-5"
       onClick={() =>
-        navigate(`${routes.COURSE_BOOKING}/${data.slug}`, {
+        navigate(
+          // `${routes.COURSE_BOOKING}${routes.COURSE_ABOUT}/${data.id}`, 
+          `${routes.COURSE_BOOKING}/${formattedTitle}-${data.id}`,
+        {
           state: { hideBook: true },
         })
       }
