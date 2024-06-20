@@ -131,306 +131,682 @@ function App() {
           element={<ResetPassword />}
         />
         {/* Redirects */}
+
+
+
         <Route
           exact
           path="/courses/pre-sea-training-for-electro-technical-officer-eto/"
           element={
-            <Navigate to="/course-booking/pre-sea-training-for-electro-technical-officer-(eto)-a1" />
+            <Navigate to="/course-booking/pre-sea-training-for-electro-technical-officer-eto-a1-11" />
           }
         />
-        <Route
-          path="/courses/orientation-courses-for-catering-personnel-occp/"
-          element={
-            <Navigate to="/course-booking/orientation-courses-for-catering-personnel-(occp)" />
-          }
-        />
-        <Route
-          path="/courses/general-purpose-rating-g-p-rating/"
-          element={
-            <Navigate to="/course-booking/about/53/general-purpose-rating-course" />
-          }
-        />
-        <Route
-          path="/courses/certificate-course-in-maritime-catering/"
-          element={
-            <Navigate to="/course-booking/about/54/certificate-course-for-maritime-catering" />
-          }
-        />
-        <Route
-          path="/btech/"
-          element={
-            <Navigate to="/course-booking/about/55/b-tech-in-marine-engineering" />
-          }
-        />
-        {/* Redirects v2 */}
-        <Route
+<Route
+          exact
           path="/courses/2nd-mate-function/"
-          element={<Navigate to="/course-booking/about/12/2nd-mate-function" />}
+          element={
+            <Navigate to="/course-booking/2nd-mate-function-12" />
+          }
         />
-        <Route
+<Route
+          exact
           path="/courses/chief-mate-phase-i/"
           element={
-            <Navigate to="/course-booking/about/13/chief-mate-phase-i" />
+            <Navigate to="/course-booking/chief-mate-phase-i-13" />
           }
         />
-        <Route
+<Route
+          exact
           path="/courses/chief-mate-phase-ii/"
           element={
-            <Navigate to="/course-booking/about/14/chief-mate-phase-ii" />
+            <Navigate to="/course-booking/chief-mate-phase-ii-14" />
           }
         />
-        <Route
+<Route
+          exact
           path="/courses/advanced-shipboard-management-asm/"
           element={
-            <Navigate to="/course-booking/about/15/advanced-shipboard-management-(asm)" />
+            <Navigate to="/course-booking/advanced-shipboard-management-asm-15" />
           }
         />
-        <Route
+<Route
+          exact
           path="/courses/eto-bridging-course/"
           element={
-            <Navigate to="/course-booking/about/16/eto-bridging-course" />
+            <Navigate to="/course-booking/eto-bridging-course-16" />
           }
         />
-        <Route
+<Route
+          exact
           path="/courses/meo-class-ii-preparatory-course/"
           element={
-            <Navigate to="/course-booking/about/17/meo-class-ii-preparatory-course" />
+            <Navigate to="/course-booking/meo-class-ii-preparatory-course-17" />
           }
         />
-        <Route
-          path="/courses/refresher-advanced-fire-fighting-aff-fpff-combined-course-part-b-practicals/"
-          element={
-            <Navigate to="/course-booking/about/18/refresher-–-advanced-fire-fighting-(aff-+fpff-combined-course)-part-b-(practicals)" />
-          }
-        />
-        <Route
+<Route
+          exact
           path="/courses/refresher-proficiency-in-survival-craft-rescue-boats-rpscrb-rpst-combined-course-part-b-practicals/"
           element={
-            <Navigate to="/course-booking/about/19/refresher-–-proficiency-in-survival-craft-&-rescue-boats-(rpscrb-+-rpst-combined-course)---part-b-(practicals)" />
+            <Navigate to="/course-booking/refresher-proficiency-in-survival-craft-and-rescue-boats-r-pscrb-r-pst-combined-course-19" />
           }
         />
-        <Route
-          path="/courses/refresher-medical-care-course-mcc/"
-          element={
-            <Navigate to="/course-booking/about/49/refresher-–-medical-care-course-(r-mcc)" />
-          }
-        />
-        <Route
-          path="/courses/medical-first-aid-mfa/"
-          element={
-            <Navigate to="/course-booking/about/52/refresher-medical-first-aid" />
-          }
-        />
-        <Route
-          path="/courses/refresher-advanced-fire-fighting-aff-fpff-combined-course-part-b-practicals/"
-          element={
-            <Navigate to="/course-booking/about/60/refresher-–-advanced-fire-fighting-(aff-+fpff-combined-course)-part-b-(practicals))" />
-          }
-        />
-        <Route
-          path="/courses/refresher-medical-first-aid-part-b-practicals"
-          element={
-            <Navigate to="/course-booking/about/61/refresher-medical-first-aid---part-b-(practicals)" />
-          }
-        />
-        <Route
-          path="/courses/refresher-medical-care-course-rmcc-part-b-practicals/"
-          element={
-            <Navigate to="/course-booking/about/62/refresher-–-medical-care-course-(rmcc)---part-b-(practicals)" />
-          }
-        />
-        <Route
-          path="/courses/refresher-proficiency-in-survival-craft-rescue-boats-rpscrb-rpst-combined-course-part-b-practicals/"
-          element={
-            <Navigate to="/course-booking/about/65/refresher-–-proficiency-in-survival-craft-&-rescue-boats-(rpscrb-+-rpst-combined-course)---part-b-(practicals)" />
-          }
-        />
-        <Route
+<Route
+          exact
           path="/courses/stcw-safety-training-course/"
           element={
-            <Navigate to="/course-booking/about/21/basic-stcw-safety-training-course-(bst-pst,pssr,-efa-&-fpff)" />
+            <Navigate to="/course-booking/basic-stcw-safety-training-course-bst-pst-pssr-efa-and-fpff-21" />
           }
         />
-        <Route
+<Route
+          exact
           path="/courses/security-training-for-seafarers-with-designated-security-duties-stsdsd/"
           element={
-            <Navigate to="/course-booking/about/22/security-training-for-seafarers-with-designated-security-duties-(stsdsd)" />
+            <Navigate to="/course-booking/security-training-for-seafarers-with-designated-security-duties-stsdsd-22" />
           }
         />
-        <Route
+<Route
+          exact
+          path="/courses/orientation-courses-for-catering-personnel-occp/"
+          element={
+            <Navigate to="/course-booking/orientation-courses-for-catering-personnel-occp-23" />
+          }
+        />
+<Route
+          exact
           path="/courses/passenger-ship-familiarization-psf/"
           element={
-            <Navigate to="/course-booking/about/25/passenger-ship-familiarization-(psf)-(crowd-management)" />
+            <Navigate to="/course-booking/passenger-ship-familiarization-psf-crowd-management-25" />
           }
         />
-        <Route
+<Route
+          exact
           path="/courses/basic-training-for-oil-chemical-tanker-cargo-operations-otf-ctf/"
           element={
-            <Navigate to="/course-booking/about/27/basic-training-for-oil-&-chemical-tanker-cargo-operations-(otf-+-ctf)" />
+            <Navigate to="/course-booking/basic-training-for-oil-and-chemical-tanker-cargo-operations-otf-ctf-27" />
           }
         />
-        <Route
-          path="/courses/basic-stcw-safety-training-course-part-b-practicals/"
-          element={
-            <Navigate to="/course-booking/about/70/basic-stcw-safety-training-course--part-b-(practicals)" />
-          }
-        />
-        <Route
+<Route
+          exact
           path="/courses/specialised-chemical-tanker-safety-course-chemco/"
           element={
-            <Navigate to="/course-booking/about/28/advanced-training-for-chemical-tanker-cargo-operations-(chemco)" />
+            <Navigate to="/course-booking/advanced-training-for-chemical-tanker-cargo-operations-chemco-28" />
           }
         />
-        <Route
+<Route
+          exact
           path="/courses/specialised-oil-tanker-safety-course-tasco-dvanced-training-for-oil-tankersafety-course-tasco/"
           element={
-            <Navigate to="/course-booking/about/29/advanced-training-for-oil-tanker-cargo-operations-(tasco)" />
+            <Navigate to="/course-booking/advanced-training-for-oil-tanker-cargo-operations-tasco-29" />
           }
         />
-        <Route
+<Route
+          exact
           path="/courses/ship-security-officer-sso-2/"
           element={
-            <Navigate to="/course-booking/about/31/ship-security-officer-(sso)" />
+            <Navigate to="/course-booking/ship-security-officer-sso-31" />
           }
         />
-        <Route
-          path="/courses/medical-care-course-mcc/"
-          element={
-            <Navigate to="/course-booking/about/38/medical-care-course-(mcc)" />
-          }
-        />
-        <Route
-          path="/courses/advanced-fire-fighting-aff-2-2/"
-          element={
-            <Navigate to="/course-booking/about/40/advanced-fire-fighting-(aff)" />
-          }
-        />
-        <Route
-          path="/courses/medical-first-aid-mfa-2/"
-          element={
-            <Navigate to="/course-booking/about/41/medical-first-aid-(mfa)" />
-          }
-        />
-        <Route
-          path="/courses/proficiency-in-survival-craft-rescue-boats-pscrb/"
-          element={
-            <Navigate to="/course-booking/about/42/proficiency-in-survival-craft-&-rescue-boats-(pscrb)" />
-          }
-        />
-        <Route
-          path="/courses/high-voltage-safety-switch-gear-course-management-level/"
-          element={
-            <Navigate to="/course-booking/about/45/high-voltage-management-level" />
-          }
-        />
-        <Route
-          path="/courses/high-voltage-safety-switch-gear-course-operational-level/"
-          element={
-            <Navigate to="/course-booking/about/51/high-voltage-operational-level" />
-          }
-        />
-        <Route
-          path="/courses/advanced-packages/"
-          element={
-            <Navigate to="/course-booking/about/56/advanced-packages(aff,mfa,pscrb)" />
-          }
-        />
-        <Route
-          path="courses/advanced-fire-fighting-aff-part-b-practicals/"
-          element={
-            <Navigate to="/course-booking/about/66/advanced-fire-fighting-(aff)--part-b-(practicals)" />
-          }
-        />
-        <Route
-          path="/courses/medical-first-aid-mfa-part-b-practicals/"
-          element={
-            <Navigate to="/course-booking/about/67/medical-first-aid-(mfa)---part-b-(practicals)" />
-          }
-        />
-        <Route
-          path="/courses/proficiency-in-survival-craft-rescue-boats-pscrb-part-b-practicals/"
-          element={
-            <Navigate to="/course-booking/about/68/proficiency-in-survival-craft-&-rescue-boats-(pscrb)-part-b-(-practicals)" />
-          }
-        />
-        <Route
-          path="/courses/medical-care-course-mcc-part-b-practicals/"
-          element={
-            <Navigate to="/course-booking/about/69/medical-care-course-(mcc)-part---b-(practicals)" />
-          }
-        />
-        <Route
+<Route
+          exact
           path="/courses/global-maritime-distress-safety-system-gmdss/"
           element={
-            <Navigate to="/course-booking/about/32/global-maritime-distress-&-safety-system-(gmdss)" />
+            <Navigate to="/course-booking/global-maritime-distress-and-safety-system-gmdss-32" />
           }
         />
-        <Route
+<Route
+          exact
           path="/courses/radar-observer-simulator-course-rosc/"
           element={
-            <Navigate to="/course-booking/about/33/radar-observer-simulator-course-(rosc)-and-automatic-radar-plotting-aids-(arpa)" />
+            <Navigate to="/course-booking/radar-observer-simulator-course-rosc-and-automatic-radar-plotting-aids-arpa-33" />
           }
         />
-        <Route
+<Route
+          exact
           path="/courses/electronic-chart-display-and-information-systems-ecdis/"
           element={
-            <Navigate to="/course-booking/about/35/electronic-chart-display-and-information-systems-(ecdis)" />
+            <Navigate to="/course-booking/electronic-chart-display-and-information-systems-ecdis-35" />
           }
         />
-        <Route
+<Route
+          exact
           path="/courses/ship-maneuvering-simulator-bridge-team-work-sms/"
           element={
-            <Navigate to="/course-booking/about/36/ship-maneuvering-simulator-&-bridge-team-work-(sms)" />
+            <Navigate to="/course-booking/ship-maneuvering-simulator-and-bridge-team-work-sms-36" />
           }
         />
-        <Route
+<Route
+          exact
           path="/courses/radararpa-navigation-simulator-ransco/"
           element={
-            <Navigate to="/course-booking/about/37/radar-arpa-&-navigation-simulator-(ransco)" />
+            <Navigate to="/course-booking/radar-arpa-and-navigation-simulator-ransco-37" />
           }
         />
-        <Route
+<Route
+          exact
+          path="/courses/medical-care-course-mcc/"
+          element={
+            <Navigate to="/course-booking/medical-care-course-mcc-38" />
+          }
+        />
+<Route
+          exact
           path="/courses/liquid-cargo-handling-simulator-oil-management-level/"
           element={
-            <Navigate to="/course-booking/about/39/liquid-cargo-handling-simulator-(lchs)" />
+            <Navigate to="/course-booking/liquid-cargo-handling-simulator-lchs-39" />
           }
         />
-        <Route
+<Route
+          exact
+          path="/courses/advanced-fire-fighting-aff-2-2/"
+          element={
+            <Navigate to="/course-booking/advanced-fire-fighting-aff-40" />
+          }
+        />
+<Route
+          exact
+          path="/courses/medical-first-aid-mfa-2/"
+          element={
+            <Navigate to="/course-booking/medical-first-aid-mfa-41" />
+          }
+        />
+<Route
+          exact
+          path="/courses/proficiency-in-survival-craft-rescue-boats-pscrb/"
+          element={
+            <Navigate to="/course-booking/proficiency-in-survival-craft-and-rescue-boats-pscrb-42" />
+          }
+        />
+<Route
+          exact
           path="/courses/engine-room-simulator-course-operational-level/"
           element={
-            <Navigate to="/course-booking/about/43/engine-room-simulator-course-(operational-level)-ers-op" />
+            <Navigate to="/course-booking/engine-room-simulator-course-operational-level-ers-op-43" />
           }
         />
-        <Route
+<Route
+          exact
           path="/courses/engine-room-simulator-course-management-level/"
           element={
-            <Navigate to="/course-booking/about/44/engine-room-simulator-course-(management-level)-ers-ml" />
+            <Navigate to="/course-booking/engine-room-simulator-course-management-level-ers-ml-44" />
           }
         />
-        <Route
+<Route
+          exact
+          path="/courses/high-voltage-safety-switch-gear-course-management-level/"
+          element={
+            <Navigate to="/course-booking/high-voltage-management-level-45" />
+          }
+        />
+<Route
+          exact
           path="/courses/fire-prevention-fire-fighting-fpff-2/"
           element={
-            <Navigate to="/course-booking/about/46/refresher-–-fire-prevention-&-fire-fighting-(r-fp&ff)" />
+            <Navigate to="/course-booking/refresher-fire-prevention-and-fire-fighting-r-fp-and-ff-46" />
           }
         />
-        <Route
+<Route
+          exact
+          path="/courses/refresher-medical-care-course-mcc/"
+          element={
+            <Navigate to="/course-booking/refresher-medical-care-course-r-mcc-49" />
+          }
+        />
+<Route
+          exact
+          path="/courses/high-voltage-safety-switch-gear-course-operational-level/"
+          element={
+            <Navigate to="/course-booking/high-voltage-operational-level-51" />
+          }
+        />
+<Route
+          exact
+          path="/courses/medical-first-aid-mfa/"
+          element={
+            <Navigate to="/course-booking/refresher-medical-first-aid-52" />
+          }
+        />
+<Route
+          exact
+          path="/courses/general-purpose-rating-g-p-rating/"
+          element={
+            <Navigate to="/course-booking/general-purpose-rating-course-53" />
+          }
+        />
+<Route
+          exact
+          path="/courses/certificate-course-in-maritime-catering/"
+          element={
+            <Navigate to="/course-booking/certificate-course-for-maritime-catering-54" />
+          }
+        />
+<Route
+          exact
+          path="/btech/"
+          element={
+            <Navigate to="/course-booking/b-tech-in-marine-engineering-55" />
+          }
+        />
+<Route
+          exact
+          path="/courses/advanced-packages/"
+          element={
+            <Navigate to="/course-booking/advanced-packages-aff-mfa-pscrb-56" />
+          }
+        />
+<Route
+          exact
           path="/courses/personal-survival-techniques-pst-2/"
           element={
-            <Navigate to="/course-booking/about/59/refresher-–-personal-survival-techniques-(pst)" />
+            <Navigate to="/course-booking/refresher-personal-survival-techniques-pst-59" />
           }
         />
-        <Route
-          path="/courses/refresher-personal-survival-techniques-rpst-part-b-practicals/"
+<Route
+          exact
+          path="/courses/refresher-advanced-fire-fighting-aff-fpff-combined-course-part-b-practicals/"
           element={
-            <Navigate to="/course-booking/about/63/refresher-–-personal-survival-techniques-(rpst)---part-b-(-practicals)" />
+            <Navigate to="/course-booking/refresher-advanced-fire-fighting-aff-fpff-combined-course-part-b-practicals-18" />
           }
         />
-        <Route
-          path="/courses/refresher-fire-prevention-fire-fighting-rfpff-part-b-practicals/"
+<Route
+          exact
+          path="/courses/refresher-medical-first-aid-part-b-practicals/"
           element={
-            <Navigate to="/course-booking/about/64/refresher-–-fire-prevention-&-fire-fighting-(rfp&ff)---part-b-(-practicals)" />
+            <Navigate to="/course-booking/refresher-medical-first-aid-part-b-practicals-61" />
           }
         />
+<Route
+          exact
+          path="/courses/refresher-medical-care-course-rmcc-part-b-practicals/"
+          element={
+            <Navigate to="/course-booking/refresher-medical-care-course-rmcc-part-b-practicals-62" />
+          }
+        />
+<Route
+          exact
+          path="/courses/refresher-proficiency-in-survival-craft-rescue-boats-rpscrb-rpst-combined-course-part-b-practicals/"
+          element={
+            <Navigate to="/course-booking/refresher-personal-survival-techniques-rpst-part-b-practicals-63" />
+          }
+        />
+<Route
+          exact
+          path="/courses/refresher-advanced-fire-fighting-aff-fpff-combined-course-part-b-practicals/"
+          element={
+            <Navigate to="/course-booking/refresher-fire-prevention-and-fire-fighting-rfp-and-ff-part-b-practicals-64" />
+          }
+        />
+<Route
+          exact
+          path="/courses/advanced-fire-fighting-aff-part-b-practicals/"
+          element={
+            <Navigate to="/course-booking/advanced-fire-fighting-aff-part-b-practicals-66" />
+          }
+        />
+<Route
+          exact
+          path="/courses/medical-first-aid-mfa-part-b-practicals/"
+          element={
+            <Navigate to="/course-booking/medical-first-aid-mfa-part-b-practicals-67" />
+          }
+        />
+<Route
+          exact
+          path="/courses/proficiency-in-survival-craft-rescue-boats-pscrb-part-b-practicals/"
+          element={
+            <Navigate to="/course-booking/proficiency-in-survival-craft-and-rescue-boats-pscrb-part-b-practicals-68" />
+          }
+        />
+<Route
+          exact
+          path="/courses/medical-care-course-mcc-part-b-practicals/"
+          element={
+            <Navigate to="/course-booking/medical-care-course-mcc-part-b-practicals-69" />
+          }
+        />
+<Route
+          exact
+          path="/courses/basic-stcw-safety-training-course-part-b-practicals/"
+          element={
+            <Navigate to="/course-booking/basic-stcw-safety-training-course-part-b-practicals-70" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/11/pre-sea-training-for-electro-technical-officer-(eto)-a1"
+          element={
+            <Navigate to="/course-booking/pre-sea-training-for-electro-technical-officer-eto-a1-11" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/12/2nd-mate-function"
+          element={
+            <Navigate to="/course-booking/2nd-mate-function-12" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/13/chief-mate-phase-i"
+          element={
+            <Navigate to="/course-booking/chief-mate-phase-i-13" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/14/chief-mate-phase-ii"
+          element={
+            <Navigate to="/course-booking/chief-mate-phase-ii-14" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/15/advanced-shipboard-management-(asm)"
+          element={
+            <Navigate to="/course-booking/advanced-shipboard-management-asm-15" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/16/eto-bridging-course"
+          element={
+            <Navigate to="/course-booking/eto-bridging-course-16" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/17/meo-class-ii-preparatory-course"
+          element={
+            <Navigate to="/course-booking/meo-class-ii-preparatory-course-17" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/19/refresher-%E2%80%93-proficiency-in-survival-craft-&-rescue-boats-(rpscrb-+-rpst-combined-course)---part-b-(practicals)"
+          element={
+            <Navigate to="/course-booking/refresher-proficiency-in-survival-craft-and-rescue-boats-r-pscrb-r-pst-combined-course-19" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/21/basic-stcw-safety-training-course-(bst-pst,pssr,-efa-&-fpff)"
+          element={
+            <Navigate to="/course-booking/basic-stcw-safety-training-course-bst-pst-pssr-efa-and-fpff-21" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/22/security-training-for-seafarers-with-designated-security-duties-(stsdsd)"
+          element={
+            <Navigate to="/course-booking/security-training-for-seafarers-with-designated-security-duties-stsdsd-22" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/23/orientation-courses-for-catering-personnel-(occp)"
+          element={
+            <Navigate to="/course-booking/orientation-courses-for-catering-personnel-occp-23" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/25/passenger-ship-familiarization-(psf)-(crowd-management)"
+          element={
+            <Navigate to="/course-booking/passenger-ship-familiarization-psf-crowd-management-25" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/27/basic-training-for-oil-&-chemical-tanker-cargo-operations-(otf-+-ctf)"
+          element={
+            <Navigate to="/course-booking/basic-training-for-oil-and-chemical-tanker-cargo-operations-otf-ctf-27" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/28/advanced-training-for-chemical-tanker-cargo-operations-(chemco)"
+          element={
+            <Navigate to="/course-booking/advanced-training-for-chemical-tanker-cargo-operations-chemco-28" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/29/advanced-training-for-oil-tanker-cargo-operations-(tasco)"
+          element={
+            <Navigate to="/course-booking/advanced-training-for-oil-tanker-cargo-operations-tasco-29" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/31/ship-security-officer-(sso)"
+          element={
+            <Navigate to="/course-booking/ship-security-officer-sso-31" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/32/global-maritime-distress-&-safety-system-(gmdss)"
+          element={
+            <Navigate to="/course-booking/global-maritime-distress-and-safety-system-gmdss-32" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/33/radar-observer-simulator-course-(rosc)-and-automatic-radar-plotting-aids-(arpa)"
+          element={
+            <Navigate to="/course-booking/radar-observer-simulator-course-rosc-and-automatic-radar-plotting-aids-arpa-33" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/35/electronic-chart-display-and-information-systems-(ecdis)"
+          element={
+            <Navigate to="/course-booking/electronic-chart-display-and-information-systems-ecdis-35" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/36/ship-maneuvering-simulator-&-bridge-team-work-(sms)"
+          element={
+            <Navigate to="/course-booking/ship-maneuvering-simulator-and-bridge-team-work-sms-36" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/37/radar-arpa-&-navigation-simulator-(ransco)"
+          element={
+            <Navigate to="/course-booking/radar-arpa-and-navigation-simulator-ransco-37" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/38/medical-care-course-(mcc)"
+          element={
+            <Navigate to="/course-booking/medical-care-course-mcc-38" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/39/liquid-cargo-handling-simulator-(lchs)"
+          element={
+            <Navigate to="/course-booking/liquid-cargo-handling-simulator-lchs-39" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/40/advanced-fire-fighting-(aff)"
+          element={
+            <Navigate to="/course-booking/advanced-fire-fighting-aff-40" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/41/medical-first-aid-(mfa)"
+          element={
+            <Navigate to="/course-booking/medical-first-aid-mfa-41" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/42/proficiency-in-survival-craft-&-rescue-boats-(pscrb)"
+          element={
+            <Navigate to="/course-booking/proficiency-in-survival-craft-and-rescue-boats-pscrb-42" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/43/engine-room-simulator-course-(operational-level)-ers-op"
+          element={
+            <Navigate to="/course-booking/engine-room-simulator-course-operational-level-ers-op-43" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/44/engine-room-simulator-course-(management-level)-ers-ml"
+          element={
+            <Navigate to="/course-booking/engine-room-simulator-course-management-level-ers-ml-44" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/45/high-voltage-management-level"
+          element={
+            <Navigate to="/course-booking/high-voltage-management-level-45" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/46/refresher-%E2%80%93-fire-prevention-&-fire-fighting-(r-fp&ff)"
+          element={
+            <Navigate to="/course-booking/refresher-fire-prevention-and-fire-fighting-r-fp-and-ff-46" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/49/refresher-%E2%80%93-medical-care-course-(r-mcc)"
+          element={
+            <Navigate to="/course-booking/refresher-medical-care-course-r-mcc-49" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/51/high-voltage-operational-level"
+          element={
+            <Navigate to="/course-booking/high-voltage-operational-level-51" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/52/refresher-medical-first-aid"
+          element={
+            <Navigate to="/course-booking/refresher-medical-first-aid-52" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/53/general-purpose-rating-course"
+          element={
+            <Navigate to="/course-booking/general-purpose-rating-course-53" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/54/certificate-course-for-maritime-catering"
+          element={
+            <Navigate to="/course-booking/certificate-course-for-maritime-catering-54" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/55/b-tech-in-marine-engineering"
+          element={
+            <Navigate to="/course-booking/b-tech-in-marine-engineering-55" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/56/advanced-packages(aff,mfa,pscrb)"
+          element={
+            <Navigate to="/course-booking/advanced-packages-aff-mfa-pscrb-56" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/59/refresher-%E2%80%93-personal-survival-techniques-(pst)"
+          element={
+            <Navigate to="/course-booking/refresher-personal-survival-techniques-pst-59" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/18/refresher-%E2%80%93-advanced-fire-fighting-(aff-+fpff-combined-course)-part-b-(practicals)"
+          element={
+            <Navigate to="/course-booking/refresher-advanced-fire-fighting-aff-fpff-combined-course-part-b-practicals-18" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/61/refresher-medical-first-aid---part-b-(practicals)"
+          element={
+            <Navigate to="/course-booking/refresher-medical-first-aid-part-b-practicals-61" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/62/refresher-%E2%80%93-medical-care-course-(rmcc)---part-b-(practicals)"
+          element={
+            <Navigate to="/course-booking/refresher-medical-care-course-rmcc-part-b-practicals-62" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/63/refresher-%E2%80%93-personal-survival-techniques-(rpst)---part-b-(-practicals)"
+          element={
+            <Navigate to="/course-booking/refresher-personal-survival-techniques-rpst-part-b-practicals-63" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/64/refresher-%E2%80%93-fire-prevention-&-fire-fighting-(rfp&ff)---part-b-(-practicals)"
+          element={
+            <Navigate to="/course-booking/refresher-fire-prevention-and-fire-fighting-rfp-and-ff-part-b-practicals-64" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/66/advanced-fire-fighting-(aff)--part-b-(practicals)"
+          element={
+            <Navigate to="/course-booking/advanced-fire-fighting-aff-part-b-practicals-66" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/67/medical-first-aid-(mfa)---part-b-(practicals)"
+          element={
+            <Navigate to="/course-booking/medical-first-aid-mfa-part-b-practicals-67" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/68/proficiency-in-survival-craft-&-rescue-boats-(pscrb)-part-b-(-practicals)"
+          element={
+            <Navigate to="/course-booking/proficiency-in-survival-craft-and-rescue-boats-pscrb-part-b-practicals-68" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/69/medical-care-course-(mcc)-part---b-(practicals)"
+          element={
+            <Navigate to="/course-booking/medical-care-course-mcc-part-b-practicals-69" />
+          }
+        />
+<Route
+          exact
+          path="/course-booking/about/70/basic-stcw-safety-training-course--part-b-(practicals)"
+          element={
+            <Navigate to="/course-booking/basic-stcw-safety-training-course-part-b-practicals-70" />
+          }
+        />
+
       </Routes>
       <ChatBotEuro />
     </ScrollToTop>

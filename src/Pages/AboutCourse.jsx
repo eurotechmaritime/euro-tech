@@ -152,6 +152,23 @@ const AboutCourse = () => {
     }
   };
 
+  const isHTML = (str) => {
+    const doc = new DOMParser().parseFromString(str, "text/html");
+    return Array.from(doc.body.childNodes).some((node) => node.nodeType === 1);
+  };
+
+  const renderEligibilityContent = () => {
+    const eligibilityContent = data?.eligibility;
+    if (!eligibilityContent) return null;
+
+    if (isHTML(eligibilityContent)) {
+      return <span className="text-[12px] md:text-[16px]" dangerouslySetInnerHTML={{ __html: eligibilityContent }} />;
+    }
+
+    return <span className="text-[12px] md:text-[16px]">{eligibilityContent}</span>;
+  };
+
+
   const dateFormatter = (date) => {
     return dayjs(date).format("DD/MM/YYYY");
   };
@@ -265,7 +282,7 @@ const AboutCourse = () => {
                       {open ? <FaChevronUp /> : <FaChevronDown />}{" "}
                     </p>
                   ) : (
-                    <p>No batches available</p>
+                    <p>We are currently planning the upcoming batch schedule. In the meantime, contact our admissions office at <a href="tel:+91 7025045000"  style={{ color: 'blue' }}> +91 7025045000 </a>for more information.</p>
                   )}
                 </div>
               )}
@@ -309,7 +326,7 @@ const AboutCourse = () => {
                 Eligibility
               </div>
               <div className="col-span-9 py-4 px-8 bg-white">
-                {data?.eligibility}
+              {renderEligibilityContent()}
               </div>
             </div>
             {routeData?.hideBook && (
