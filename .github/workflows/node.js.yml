@@ -26,5 +26,3 @@ jobs:
 
       - name: Install dependencies
         run: npm install --force
-      - name: PM2 Restart
-        run: pm2 restart euro-tech
