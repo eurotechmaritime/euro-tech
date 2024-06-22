@@ -26,3 +26,5 @@ jobs:
 
       - name: Install dependencies
         run: npm install --force
+      - name: PM2 restart
+        run: pm2 restart euro-web
