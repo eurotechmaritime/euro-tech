@@ -42,8 +42,8 @@ const AboutCourse = () => {
     }
   },[title])
 
-  console.log("id",id,routeData)
-  // console.log("id",ID)
+  // console.log("id",id,routeData)
+   console.log("ID",ID)
   console.log("title",title)
 
   useEffect(() => {
@@ -98,14 +98,14 @@ const AboutCourse = () => {
       try {
         if(!ID) return
         const res = await axios.get(
-          `${Endpoints.API_URL}/batches/get/list?course_id=${id}`
+          `${Endpoints.API_URL}/batches/get/list?course_id=${ID}`
         );
         setBatchData(res.data.data);
       } catch (e) {
         console.log(e);
       }
     })();
-  }, []);
+  }, [ID]);
 
   // e.status hard coded, it is to be changed in future
   useEffect(() => {

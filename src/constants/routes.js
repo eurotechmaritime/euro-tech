@@ -1,6 +1,8 @@
 export const routes = {
   HOME: "/",
   ABOUT: "/about-us",
+  ANTI_RAGGING:"/anti-ragging-policy-and-reporting",
+  GRIVERANCE_FORM:"/griverance-form",
   GOVERNING_BOARD: "/governing-board",
   WHY_EUROTECH: "/why-eurotech",
   AWARDS: "/awards",

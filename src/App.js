@@ -4,6 +4,8 @@ import Homepage from "./Pages/Homepage";
 import Layout from "./Components/Layout";
 import { routes } from "./constants/routes";
 import About from "./Pages/About";
+import AntiRagging from "./Pages/AntiRagging";
+import GriveranceForm from "./Pages/GriveranceForm";
 import GoverningBoard from "./Pages/GoverningBoard";
 import WhyEurotech from "./Pages/WhyEurotech";
 import Awards from "./Pages/Awards";
@@ -76,6 +78,8 @@ function App() {
           <Route path={routes.PRIVACY_POLICY} element={<PrivacyPolicy />} />
           <Route path={routes.DISCLAIMER} element={<Disclaimer />} />
           <Route path={routes.ABOUT} element={<About />} />
+          <Route path={routes.ANTI_RAGGING} element={<AntiRagging/>}/>
+          <Route path={routes.GRIVERANCE_FORM} element={<GriveranceForm/>} />
           <Route path={routes.GOVERNING_BOARD} element={<GoverningBoard />} />
           <Route path={routes.WHY_EUROTECH} element={<WhyEurotech />} />
           <Route path={routes.AWARDS} element={<Awards />} />

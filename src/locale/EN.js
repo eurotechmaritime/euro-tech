@@ -13,6 +13,9 @@ export const EN = {
     MISSION_CONTENT:
       "<p>The mission of Euro Tech Maritime Academy is to provide innovative educational environments, opportunities, and experiences that enable individuals meet the needs of employers and prepare maritime professionals to succeed in a fast-changing competitive environment.</p><br/><p>To provide excellent inclusive Marine education with high values and to reach the unreached.</p><p>To inspire young minds to develop critical thinking and problem solving skills with a life-long enthusiasm for inquiry and learning.</p><p>To provide Goal-Oriented, Quality-Based and Value Added Education through State -Of- the-Art Technology at par with International Standards.</p><p>To prepare the students with High Professional Skills and Ethical Values.</p><p>To prepare each student for academic social and personal success by creating a community of empowered and diverse learners striving to be globally-minded citizens in an atmosphere of mutual respect, understanding trust and devoted service to the whole human community.</p>",
   },
+  anti_ragging: {
+    PAGE_TITLE: "Anti Ragging Policy",
+  },
   governing_board: {
     PAGE_TITLE: "Governing Body",
     P1_NAME: "Mr. Jenson Paul",
@@ -265,6 +268,8 @@ export const EN = {
     NEWS: "Gallery",
     ABOUT: "About Us",
     GOVERNING_BODY: "Governing Body",
+    ANTI_RAGGING_POLICY: "Anti Ragging Policy",
+    GRIVERANCE_FORM:"Griverance Form",
     COURSES: "Courses",
     FACILITIES: "Facilities",
     WORK_WITH_US: "Work with us",

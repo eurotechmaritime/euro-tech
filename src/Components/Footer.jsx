@@ -69,6 +69,12 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
+                  <Link to={routes.ANTI_RAGGING}>{EN.links.ANTI_RAGGING_POLICY}</Link>
+                </li>
+                <li>
+                  <Link to={routes.GRIVERANCE_FORM}>{EN.links.GRIVERANCE_FORM}</Link>
+                </li>
+                <li>
                   <Link to={routes.COURSES}>{EN.links.COURSES}</Link>
                 </li>
                 <li>

@@ -61,12 +61,14 @@ const CourseDetailItem = ({ data, batches }) => {
           {/*<p className="text-[14px] font-bold ">Tutor Name</p>*/}
           <div className=" flex flex-col text-[14px] my-2 mt-0 gap-1">
             <p>
-            <span className="font-bold">Duration : -{" "}</span>
+              <span className="font-bold">Duration : - </span>
               <span className="">{data?.course?.duration} Day</span>
             </p>
             <p className="">
-             <span className="font-bold">Eligibility : -{" "}</span>
-              <span className=" text-[12px] md:text-[16px] ">{data?.course?.eligibility}</span>
+              <span className="font-bold">Eligibility : - </span>
+              <span className=" text-[12px] md:text-[16px] ">
+                {data?.course?.eligibility}
+              </span>
             </p>
           </div>
           <div className="flex gap-5 ">
@@ -91,7 +93,7 @@ const CourseDetailItem = ({ data, batches }) => {
         </div>
         <div className="flex flex-col justify-between">
           {data?.batch_name ? (
-            <button 
+            <button
               className="bg-[#CDE0F4] flex items-center gap-3 text-black font-semibold px-6 py-1 rounded-xl whitespace-nowrap"
               onClick={() =>
                 navigate(routes.BATCHES, {
